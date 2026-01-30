@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Passion en Image | Pixel Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Ma Passion en Image</h1>
+    <p class="subtitle">LE PIXEL ART<span class="cursor"></span></p>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">[ QU'EST-CE QUE LE PIXEL ART ? ]</h2>
+        <div class="introduction">
+          <p>
+            Le <span class="highlight">Pixel Art</span> est une forme d'art numérique où l’image naît de l’élément le
+            plus fondamental de l’écran : le pixel.
+            C'est l'art de la <span class="highlight">contrainte créative</span>, où chaque pixel compte et contribue à
+            l'ensemble de l'œuvre.
+          </p>
+          <p>
+            Né dans les années 1970-1980 avec les premiers jeux vidéo et ordinateurs, le pixel art était d'abord une
+            <span class="highlight">nécessité technique</span> due aux limitations des machines de l'époque.
+            Aujourd’hui, il s’est totalement affranchi de ces contraintes historiques,
+            explorant de nouvelles narrations, des ambiances fortes, des émotions subtiles et des univers
+            visuels contemporains. Le pixel art est désormais un langage artistique à part entière, capable d’être
+            moderne, expérimental et profondément expressif.
+          </p>
+          <p>
+            Cette vitalité se retrouve dans des événements communautaires comme l'<span
+              class="highlight">Octobit</span>, qui me tient particulièrement
+            à cœur. Ce défi créatif annuel célèbre le pixel art comme un espace d’innovation et de partage pendant le
+            mois d'<span class="highlight">Octobre</span>, invitant les
+            artistes à repousser leurs limites autour d’un thème commun. L’Octobit montre que le pixel art est un médium
+            <span class="highlight">vivant</span>, porté par une communauté <span class="highlight">passionnée</span> et
+            tournée vers l’avenir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <div class="container">
+        <h2 class="section-title">[ GALERIE ]</h2>
+        <div class="gallery-grid" id="galerie-container">
+          <!-- Les images seront ajoutées dynamiquement par JavaScript -->
+        </div>
+
+        <!-- Section images utilisateurs -->
+        <div class="user-images-section" id="user-images-section" style="display: none;">
+          <h3 class="user-images-title">// VOS CONTRIBUTIONS</h3>
+          <div class="gallery-grid" id="user-images-container">
+            <!-- Les images utilisateurs seront ajoutées dynamiquement -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">[ PROPOSER UNE IMAGE ]</h2>
+        <div class="form-section">
+          <form id="form-proposition">
+            <div class="form-group">
+              <label for="input-fichier">&gt; SÉLECTIONNER UN FICHIER_</label>
+              <input type="file" id="input-fichier" accept="image/*" required>
+            </div>
+            <div class="form-group">
+              <label for="input-titre">&gt; TITRE DE L'IMAGE_</label>
+              <input type="text" id="input-titre" placeholder="Entrez le titre..." required>
+            </div>
+            <div class="form-group">
+              <label for="input-description">&gt; DESCRIPTION_</label>
+              <textarea id="input-description" placeholder="Décrivez votre image..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">[ SOUMETTRE ]</button>
+          </form>
+          <div class="form-success" id="message-succes">
+            <p>✓ IMAGE AJOUTÉE AVEC SUCCÈS !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== POPUP POUR AFFICHER L'IMAGE EN GRAND ===== -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+      <button class="popup-close" id="popup-close">[ FERMER ]</button>
+      <img src="" alt="" id="popup-image">
+      <div class="popup-info">
+        <h3 class="popup-title" id="popup-titre"></h3>
+        <p class="popup-desc" id="popup-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2 class="footer-title">// MENTIONS LÉGALES</h2>
+
+      <div class="footer-section">
+        <h3>&gt; RÉALISATION</h3>
+        <p>Site web conçu et développé dans le cadre d'un projet SAE par <strong>SISSOKO Bakary</strong>, Etudiant en
+          BUT Métier du Multimédia et de l'Internet à champs sur marne.</p>
+        <p>Pour toute demande, me contacter via l'adresse suivante : bs.utilitaires@gmail.com</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>&gt; DROITS D'AUTEUR</h3>
+        <p>
+          Certains visuels utilisés sur ce site proviennent de la plateforme Pixilart
+          (https://www.pixilart.com).
+
+          Artworks réalisés par leurs auteurs respectifs, notamment : <br>
+          AbueloRetroWave [https://www.instagram.com/abueloretrowave], <br>
+          curemoto [https://www.pixilart.com/curemoto], <br>
+          Cotufa [https://www.pixilart.com/cotufa], <br>
+          Xyereia [https://www.pixilart.com/xyereia], <br>
+          HazbinHelluva [https://www.pixilart.com/hazbinhelluva], <br>
+          Arrow-Head [https://www.pixilart.com/arrow-head].
+
+          <br> Ces visuels sont utilisés à des fins non commerciales, dans le respect des conditions définies par leurs
+          créateurs.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>&gt; IMAGES SOUMISES</h3>
+        <p>
+          Les images proposées par les visiteurs via le formulaire sont stockées localement
+          dans le navigateur et ne sont pas transmises à un serveur. L'utilisateur reste
+          responsable des images qu'il soumet et doit s'assurer de détenir les droits nécessaires.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>&gt; DONNÉES PERSONNELLES</h3>
+        <p>
+          Ce site ne collecte aucune donnée personnelle. Aucun cookie n'est utilisé.
+          Les images soumises sont uniquement stockées dans le navigateur du visiteur. <br>
+          Hébergeur : github <br>
+        </p>
+      </div>
+
+      <p class="footer-copyright"> &copy; 2026 - Ma Passion en Image | Pixel Art - SISSOKO Bakary - Tous droits réservés
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
